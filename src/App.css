@@ -1,0 +1,301 @@
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+}
+
+.app-container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+.left-section,
+.right-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 50px;
+  color: white;
+}
+
+.left-section {
+  background: url('./assets/images/left-image.jpg') no-repeat center center/cover;
+  flex: 0 0 50%; /* Left section takes 50% of width */
+}
+
+.right-section {
+  background: url('./assets/images/right-image.jpg') no-repeat center center/cover;
+  flex: 0 0 40%; /* Right section takes 40% of width */
+}
+
+/* Text Styles */
+.announcement-text {
+  font-size: 14px;
+  font-weight: 300;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 10px 0;
+}
+
+.hashtag {
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.quote {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-top: 20px;
+}
+
+.open-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.open-button:hover {
+  background-color: #f0f0f0;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .app-container {
+
+    flex-direction: column; /* Stack sections vertically */
+  }
+  .right-section {
+    background: url('./assets/images/right-image.jpg') no-repeat center center/cover;
+  }
+
+  .left-section {
+    display: none; /* Hide left section on mobile */
+    color: white;
+
+  }
+
+  .right-section {
+    width: 100%; /* Full width on mobile */
+    background: none;
+    padding: 20px;
+    color: white;
+
+  }
+
+  .announcement-text {
+    font-size: 12px;
+color: white;
+    font: bold !important; 
+
+  }
+
+  .title {
+    font-size: 24px;
+    color: white;
+
+  }
+
+  .hashtag {
+    font-size: 16px;
+    color: white;
+
+  }
+
+  .open-button {
+    font-size: 16px;
+    padding: 8px 16px;
+    color: black;
+    background-color: white;
+
+  }
+
+  .quote {
+    display: none;
+    color: white;
+
+  }
+}
+/* Styling for the music player and slideshow */
+.music-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slideshow {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.slideshow-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.overlay-text {
+  position: absolute;
+  text-align: center;
+  color: white;
+  padding: 20px;
+  z-index: 1;
+}
+
+.overlay-text .announcement-text {
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.overlay-text .title {
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.overlay-text .hashtag {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.scroll-to-begin {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 16px;
+  color: white;
+  background-color: black;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.scroll-to-begin:hover {
+  background-color: #333;
+}
+
+/* Media Query untuk responsif di mode Mobile */
+@media (max-width: 768px) {
+  .music-container {
+    height: auto;
+    padding: 20px;
+  }
+
+  .slideshow {
+    height: 300px; /* Mengatur tinggi slideshow di mobile */
+  }
+
+  .slideshow-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .overlay-text .announcement-text {
+    font-size: 16px;
+  }
+
+  .overlay-text .title {
+    font-size: 36px;
+  }
+
+  .overlay-text .hashtag {
+    font-size: 20px;
+  }
+
+  .scroll-to-begin {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+/* Styling for the Welcome Message */
+.welcome-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.welcome-text {
+  font-size: 20px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.welcome-text b {
+  font-weight: bold;
+}
+
+.welcome-text i {
+  font-style: italic;
+  font-weight: 300;
+}
+
+.slideshow {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+.slideshow-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Media Query untuk Responsif Mobile */
+@media (max-width: 768px) {
+  .right-section {
+    background: url('./assets/images/right-image.jpg') no-repeat center center/cover;
+  }
+
+  .welcome-message {
+    padding: 10px;
+  }
+
+  .welcome-text {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .slideshow {
+    height: 200px;
+  }
+
+  .slideshow-image {
+    object-fit: cover;
+  }
+}
+
